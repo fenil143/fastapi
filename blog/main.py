@@ -45,7 +45,6 @@ def destroy(id: int, db: Session = Depends(get_db)):
     db.commit()
     return  # no response body for 204
 
-
 # UPDATE
 @app.put('/blog/{id}', status_code=status.HTTP_202_ACCEPTED)
 def update_blog(id: int, request: schemas.Blog, db: Session = Depends(get_db)):
